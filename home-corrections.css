@@ -1,9 +1,0 @@
-#home .home-recommend .product .product-name{display:block!important;position:static!important;visibility:visible!important;opacity:1!important;color:#eef5e7!important;font-size:21px;font-weight:550;line-height:1.5;margin:0 0 12px;padding:0;transform:none!important}
-#home .home-recommend .product-art{height:300px!important;overflow:hidden;display:grid;place-items:center}
-#home .home-recommend .product-art img{position:static!important;display:block;width:100%;height:100%;object-fit:contain!important;max-height:300px}
-#home .robot-render{width:300px;max-width:100%;height:auto;aspect-ratio:1;background-size:200% 100%;background-position:right center;flex:none}
-#home .home-recommend .card-copy{min-height:160px!important;padding:24px!important}
-#home .refined-visual{height:640px!important;overflow:visible!important}
-#home #refinedStage{inset:-15px -35px!important;background:transparent!important;border:0;border-radius:0;overflow:hidden}
-#home #refinedStage canvas{display:block;width:100%;height:100%}
-@media(max-width:760px){#home .refined-visual{height:440px!important}#home #refinedStage{inset:0 -12px!important}#home .home-recommend .product-art{height:280px!important}#home .robot-render{width:280px}}

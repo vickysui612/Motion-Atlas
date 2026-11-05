@@ -1,7 +1,0 @@
-.column-purpose{color:#b4c59f;font-size:12px;font-weight:600;letter-spacing:.5px;padding:0 0 13px;margin-bottom:15px;border-bottom:1px solid #2b3823;flex:none}
-.center>.column-purpose{padding:15px 18px;margin:0;height:46px;box-sizing:border-box}
-.product-result{display:block;text-decoration:none;margin:7px 0}
-.pump-app{min-height:0;height:100dvh}.center{min-height:0}.stage{min-height:120px}
-#motionDialog{width:min(1380px,98vw);height:98dvh;max-height:98dvh;max-width:98vw;margin:auto}
-.motion-dialog-head{height:44px;padding:6px 16px}#motionFrame{height:calc(100% - 44px);display:block}
-@media(max-width:850px){.pump-app{height:auto;min-height:100dvh}.center{min-height:520px}.column-purpose{font-size:11px}.center>.column-purpose{padding:13px 9px}}
