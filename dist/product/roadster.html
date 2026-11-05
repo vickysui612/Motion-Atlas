@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="机趣：为机械初学者设计的2D机构与3D产品拆解教学原型">
+  <title>机趣 · Roadster 机械结构探索</title>
+  <link rel="stylesheet" href="roadster.css?v=2">
+</head>
+<body class="embedded">
+  <header class="topbar">
+    <a class="brand" href="#home"><span class="brand-mark">M</span><b>机趣</b><small>MECH ATLAS</small></a>
+    <nav aria-label="主导航"><a data-nav="home" href="#home">首页</a><a data-nav="product" href="#product/roadster">拆产品</a><a data-nav="atlas" href="#atlas">逛机构</a></nav>
+    <div class="top-meta"><span class="live-dot"></span>教学原型 v0.1</div>
+  </header>
+  <main>
+    <section id="page-home" class="page home-page">
+      <div class="hero-copy"><span class="kicker">MECHANICS, MADE VISIBLE</span><h1>先看懂运动，<br><em>再走进机器内部。</em></h1><p>“逛机构”用二维运动简图讲清原理，“拆产品”用三维模型展示结构所在的位置。两条路径可以相互跳转。</p><div class="hero-actions"><a class="primary" href="#product/roadster">拆解 Roadster <span>→</span></a><a class="secondary" href="#mechanism/rack-pinion">体验齿轮齿条</a></div><div class="concept-path"><span>产品</span><i>→</i><span>系统</span><i>→</i><span>机构</span><i>→</i><span>零件</span></div></div>
+      <div class="hero-model" aria-label="Roadster低模概念图"><div class="hero-car"><div class="hero-canopy"></div><div class="hero-body"></div><i class="hero-wheel one"></i><i class="hero-wheel two"></i><div class="hero-system-line"></div><div class="hero-battery"></div></div><div class="hero-callout callout-a"><b>01</b> 低模产品拆解</div><div class="hero-callout callout-b"><b>02</b> 结构位置联动</div></div>
+      <div class="route-cards"><a href="#product/roadster"><span>01 · 从产品出发</span><h2>拆产品</h2><p>旋转、透明、聚焦、爆炸，逐层认识七大系统。</p><b>打开3D产品 →</b></a><a href="#atlas"><span>02 · 从运动出发</span><h2>逛机构</h2><p>拖动标准二维运动简图，理解运动怎样被转换。</p><b>打开2D机构馆 →</b></a></div>
+    </section>
+    <section id="page-atlas" class="page atlas-page"><header class="section-heading"><div><span class="kicker">2D MECHANISM ATLAS</span><h1>从运动原理开始</h1><p>这里只展示平面机构运动简图。固定点不动，运动副按约束运动。</p></div><a class="primary small" href="#mechanism/rack-pinion">打开完整示例 →</a></header><div id="mechanism-grid" class="mechanism-grid"></div></section>
+    <section id="page-mechanism" class="page mechanism-page">
+      <div class="page-intro"><a href="#atlas">← 返回机构馆</a><span>二维机构简图 · 可交互</span></div>
+      <div class="mechanism-shell">
+        <article class="diagram-panel"><header class="panel-title"><div><span class="kicker">KINEMATIC DIAGRAM</span><h1>齿轮齿条机构</h1></div><div class="joint-legend"><span><i class="fixed-symbol"></i>固定机架</span><span><i class="revolute-symbol"></i>转动副</span><span><i class="slide-symbol"></i>移动副</span></div></header><div id="rack-pinion-stage" class="rack-pinion-stage" aria-label="可拖动的齿轮齿条机构"></div><div class="motion-flow"><span><b>输入</b> 转动输入</span><i>→</i><span><b>转换</b> 齿轮啮合</span><i>→</i><span><b>输出</b> 直线移动</span></div><div class="play-controls"><button id="motion-play" class="play-button">▶</button><input id="motion-progress" type="range" min="0" max="100" value="50"><div class="speed-controls"><button data-speed="0.5">0.5×</button><button data-speed="1" class="active">1×</button><button data-speed="1.5">1.5×</button></div><button id="motion-reset">复位</button></div></article>
+        <aside class="product-example"><span class="kicker">REAL PRODUCT EXAMPLE</span><h2>它在 Roadster 的哪里？</h2><p>方向盘带动小齿轮旋转，齿条左右移动，再通过横拉杆改变前轮方向。</p><div class="example-car"><div class="example-car-body"></div><div class="example-window"></div><i class="ewheel a"></i><i class="ewheel b"></i><div class="steering-highlight"><b></b><span></span><em></em></div><div class="example-label">转向系统位置</div></div><div class="breadcrumb-card"><small>定位路径</small><b>Roadster</b><i>›</i><b>转向系统</b><i>›</i><strong>齿轮齿条机构</strong></div><a class="primary wide" href="#product/roadster/steering-system/rack-pinion/steering-rack">在3D产品中查看齿条 <span>↗</span></a></aside>
+      </div>
+    </section>
+    <section id="page-product" class="page product-page">
+      <div class="product-head"><div><span class="kicker">INTERACTIVE 3D</span><h1>Roadster 机械结构探索</h1><p>旋转观察整车，或从左侧沿四级结构逐层进入。</p></div></div>
+      <div class="explorer">
+        <aside class="component-panel"><div class="aside-heading"><span>结构浏览器</span><b>7 个系统</b></div><label class="component-search"><span>⌕</span><input id="component-search" placeholder="搜索系统或零件"></label><button class="tree-root selected" data-select-product><span class="cube-icon">◇</span><b>Roadster 教学模型</b><small>完整产品</small></button><div id="component-tree" class="component-tree"></div><div class="tree-tip">也可以直接点击中央模型中的零件</div></aside>
+        <section class="viewer-card"><div class="viewer-toolbar"><div class="mode-tabs"><button data-mode="normal" class="active">正常</button><button data-mode="xray">透明</button><button data-mode="isolate">单独显示</button><button data-mode="explode">爆炸</button></div><div><button id="toggle-labels" class="active">标签</button><button id="reset-camera">重置视角</button></div></div><div class="viewer-subbar"><span id="viewer-status">完整车辆 · 拖动旋转 · 滚轮缩放</span><label id="explode-control">爆炸程度 <input id="explode-range" type="range" min="0" max="100" value="45"></label></div><div id="three-stage" class="three-stage"><div id="three-labels" class="three-labels"></div><div class="axis-hint"><b>拖动</b>旋转　<b>Shift+拖动</b>平移　<b>滚轮</b>缩放</div></div><div class="level-path" id="level-path"><span>产品</span><i>›</i><b>Roadster</b></div></section>
+        <aside class="insight-panel"><div class="insight-eyebrow"><span id="insight-level">产品层</span><button id="clear-selection">×</button></div><h2 id="insight-name">Roadster 教学模型</h2><p id="insight-purpose">选择左侧层级或点击3D零件，了解它在整车中的位置与作用。</p><div class="info-tabs"><button class="active">概览</button><button>功能</button><button>材料</button></div><div id="part-preview" class="part-preview"><div class="preview-cube">◇</div><small>PRODUCT / 01</small><b>完整低模产品</b></div><dl class="property-list"><div><dt>所属位置</dt><dd id="prop-location">完整车辆</dd></div><div><dt>材料</dt><dd id="prop-material">多种教学材质</dd></div><div><dt>运动方式</dt><dd id="prop-movement">多个系统协同</dd></div></dl><button id="focus-selection" class="focus-button">◎ 聚焦当前结构</button><a id="open-2d" class="related-link hidden" href="#mechanism/rack-pinion"><span>查看对应二维运动简图</span><b>↗</b></a></aside>
+      </div><div id="route-warning" class="route-warning" role="status"></div>
+    </section>
+  </main>
+  <div id="toast" class="toast" role="status"></div>
+  <script type="module" src="./src/main.js?v=2"></script>
+</body>
+</html>

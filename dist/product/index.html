@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>机趣 · 机械结构探索样机</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="improvements.css" />
+  <link rel="stylesheet" href="hierarchy.css" />
+  <link rel="stylesheet" href="mechanics-v2.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="机趣首页"><span class="brand-mark">M</span><span>机趣</span><small>MECH ATLAS</small></a>
+    <nav><button data-page="home" class="nav-active">首页</button><button data-page="products">拆产品</button><button data-page="atlas">逛机构</button></nav>
+    <div class="top-actions"><button class="ghost">学习记录</button><button class="round">♡</button></div>
+  </header>
+
+  <main>
+    <section id="home" class="page active-page">
+      <div class="hero">
+        <div class="eyebrow"><i></i> 为机械小白设计的互动图鉴</div>
+        <h1>看见机器内部，<br><span>理解每一次运动。</span></h1>
+        <p>输入一个产品，或描述你想实现的运动。我们把复杂机械拆成能看、能玩、能理解的结构。</p>
+        <div class="searchbox"><span>⌕</span><input id="hero-input" placeholder="试试：汽车是怎样转向的？"/><button id="hero-search">开始探索 <b>→</b></button></div>
+        <div class="examples">大家在搜：<button data-query="汽车">汽车</button><button data-query="电钻">电钻</button><button data-query="旋转变成直线运动">旋转变成直线运动</button></div>
+      </div>
+      <div class="choice-grid">
+        <article class="choice-card product-card" data-go="products">
+          <div><span class="step">01</span><span class="pill">从整体出发</span></div>
+          <h2>拆一个产品</h2><p>从熟悉的产品进入，逐层看懂系统、机构和零件。</p>
+          <div class="product-visual">
+            <div class="car-shell"></div><div class="wheel w1"></div><div class="wheel w2"></div><div class="wheel w3"></div><div class="wheel w4"></div>
+            <div class="drive-line"></div><div class="engine"></div><div class="callout c1">动力系统</div><div class="callout c2">转向系统</div>
+          </div>
+          <button>进入产品馆 <b>↗</b></button>
+        </article>
+        <article class="choice-card atlas-card" data-go="atlas">
+          <div><span class="step">02</span><span class="pill">从运动出发</span></div>
+          <h2>逛一逛机构</h2><p>按输入与输出动作筛选，像逛博物馆一样发现机构。</p>
+          <div class="mini-mechs">
+            <div class="mini"><div class="gear g1"></div><div class="gear g2"></div></div>
+            <div class="mini crank"><i></i><b></b><em></em></div>
+            <div class="mini belt"><i></i><b></b><em></em></div>
+          </div>
+          <button>进入机构馆 <b>↗</b></button>
+        </article>
+      </div>
+    </section>
+
+    <section id="products" class="page">
+      <div class="section-head"><div><span class="kicker">PRODUCT GALLERY</span><h1>从熟悉的产品开始拆</h1><p>选择一个产品，沿着“产品 → 系统 → 机构 → 零件”逐层探索。</p></div><div class="search-small">⌕ <input placeholder="搜索产品"></div></div>
+      <div class="filter-row"><button class="selected">全部</button><button>交通工具</button><button>家用电器</button><button>工具</button><button>日常用品</button></div>
+      <div class="products-grid">
+        <article class="catalog-card featured" data-detail="car"><span class="status">完整3D</span><div class="catalog-visual product-cutaway"><svg viewBox="0 0 360 220" role="img" aria-label="透明汽车及内部系统"><path class="shell" d="M38 143l12-52c3-13 13-22 26-25l61-14c30-7 71-5 96 10l43 27 42 10c10 3 17 12 17 23v25H38z"/><path class="window" d="M112 69l32-8c25-6 52-4 72 6l28 18H101z"/><circle class="tire" cx="95" cy="148" r="31"/><circle class="hub" cx="95" cy="148" r="13"/><circle class="tire" cx="282" cy="148" r="31"/><circle class="hub" cx="282" cy="148" r="13"/><rect class="sys orange" x="62" y="100" width="66" height="38" rx="6"/><path class="sys lime-stroke" d="M126 121h121l32 18"/><rect class="sys violet" x="151" y="106" width="44" height="27" rx="6"/><circle class="sys cyan" cx="260" cy="121" r="19"/><g class="label-lines"><path d="M93 100V76H58"/><path d="M173 106V86h33"/></g><g class="svg-label"><text x="20" y="74">动力</text><text x="208" y="84">传动</text></g></svg><div class="system-legend"><span><i class="orange-bg"></i>动力</span><span><i class="violet-bg"></i>传动</span><span><i class="cyan-bg"></i>转向</span></div></div><h3>汽车</h3><p>动力 · 转向 · 制动 · 悬架</p><footer><span>8 个系统</span><b>探索 →</b></footer></article>
+        <article class="catalog-card"><span class="status basic">基础3D</span><div class="catalog-visual product-cutaway"><svg viewBox="0 0 360 220" role="img" aria-label="透明手电钻及内部系统"><path class="shell" d="M45 72c0-17 14-30 30-30h154c18 0 34 7 46 20l18 20h32v48h-49l-25 17h-63l-2 50h-73l-18-67H75c-16 0-30-13-30-30z"/><path class="shell handle" d="M119 123h75l-8 74h-66l-17-61z"/><rect class="sys cyan" x="66" y="70" width="83" height="48" rx="19"/><circle class="motor-line" cx="82" cy="94" r="10"/><circle class="motor-line" cx="109" cy="94" r="10"/><circle class="motor-line" cx="136" cy="94" r="10"/><rect class="sys violet" x="149" y="76" width="48" height="36" rx="5"/><g class="gear-dots"><circle cx="162" cy="94" r="9"/><circle cx="183" cy="94" r="9"/></g><path class="sys lime-stroke" d="M197 94h89"/><rect class="sys orange" x="114" y="128" width="45" height="54" rx="5"/><path class="bit" d="M286 87h39v14h-39z"/><g class="label-lines"><path d="M107 70V53H76"/><path d="M171 76V54h30"/><path d="M136 128v-9"/></g><g class="svg-label"><text x="44" y="51">电机</text><text x="203" y="52">齿轮箱</text><text x="116" y="117">电池</text></g></svg><div class="system-legend"><span><i class="cyan-bg"></i>电机</span><span><i class="violet-bg"></i>减速箱</span><span><i class="orange-bg"></i>电池</span></div></div><h3>手电钻</h3><p>电机 · 齿轮箱 · 夹头</p><footer><span>5 个系统</span><b>探索 →</b></footer></article>
+        <article class="catalog-card"><span class="status">完整3D</span><div class="catalog-visual product-cutaway"><svg viewBox="0 0 360 220" role="img" aria-label="自行车及传动系统"><circle class="tire bike-tire" cx="86" cy="145" r="53"/><circle class="tire bike-tire" cx="276" cy="145" r="53"/><path class="bike-frame" d="M86 145l61-77 46 77H86l39-52h93l58 52M147 68h-26m72 77l38-84m-15 0h34"/><circle class="sys orange" cx="193" cy="145" r="19"/><circle class="sys lime-ring" cx="86" cy="145" r="10"/><path class="sys lime-stroke thin" d="M86 134h107M86 156h107"/><path class="sys cyan-stroke" d="M264 86l12 59"/><g class="svg-label"><text x="142" y="183">链传动</text><text x="247" y="58">转向</text></g></svg><div class="system-legend"><span><i class="orange-bg"></i>曲柄</span><span><i class="lime-bg"></i>链传动</span><span><i class="cyan-bg"></i>转向</span></div></div><h3>自行车</h3><p>传动 · 转向 · 制动</p><footer><span>6 个系统</span><b>探索 →</b></footer></article>
+        <article class="catalog-card"><span class="status basic">基础3D</span><div class="catalog-visual product-cutaway"><svg viewBox="0 0 360 220" role="img" aria-label="透明电风扇及内部系统"><path class="shell fan-shell" d="M175 42c51 0 92 38 92 84s-41 84-92 84-92-38-92-84 41-84 92-84z"/><circle class="guard" cx="175" cy="126" r="75"/><circle class="sys orange" cx="175" cy="126" r="25"/><g class="fan-blades"><path d="M175 117c-20-44-8-62 8-59 17 4 20 31 5 60z"/><path d="M184 129c48-4 61 12 51 25-11 14-36 4-56-14z"/><path d="M167 132c-28 39-49 38-55 22-6-16 16-33 51-34z"/></g><path class="sys violet" d="M157 194h36l17 18h-70z"/><path class="stand" d="M175 194v-31M137 212h76"/><circle class="sys cyan" cx="175" cy="126" r="9"/><g class="svg-label"><text x="28" y="81">叶片</text><text x="238" y="104">电机</text><text x="222" y="194">摇头机构</text></g><g class="label-lines"><path d="M65 84l51 20"/><path d="M238 107l-39 12"/><path d="M220 190l-32-24"/></g></svg><div class="system-legend"><span><i class="cyan-bg"></i>扇叶</span><span><i class="orange-bg"></i>电机</span><span><i class="violet-bg"></i>摇头</span></div></div><h3>电风扇</h3><p>电机 · 摇头 · 调速</p><footer><span>4 个系统</span><b>探索 →</b></footer></article>
+      </div>
+    </section>
+
+    <section id="atlas" class="page">
+      <div class="section-head compact"><div><span class="kicker">MECHANISM ATLAS</span><h1>你想得到什么运动？</h1><p>不需要知道专业名称，从你能描述的动作开始。</p></div><button id="surprise" class="surprise">✦ 查看全部 10 种</button></div>
+      <div class="motion-builder structured-builder">
+        <div class="builder-head"><div><span>运动转换矩阵</span><h2>搭出你需要的运动路径</h2></div><button id="reset-filters">重置条件</button></div>
+        <div class="builder-steps">
+          <div class="builder-step"><b>1</b><label>动力来源</label><div class="motion-options" data-kind="source"><button class="selected" data-value="hand">手摇</button><button data-value="motor">电机</button><button data-value="cylinder">气缸</button><button data-value="spring">弹簧</button><button data-value="gravity">重力</button></div></div>
+          <div class="builder-arrow">→</div>
+          <div class="builder-step"><b>2</b><label>输入运动</label><div class="motion-options" data-kind="input"><button class="selected" data-value="rotate">↻ 连续旋转</button><button data-value="linear">↔ 直线推拉</button><button data-value="swing">⌁ 左右摆动</button><button data-value="press">↓ 单次按压</button></div></div>
+          <div class="builder-arrow">→</div>
+          <div class="builder-step"><b>3</b><label>输出运动</label><div class="motion-options" data-kind="output"><button class="selected" data-value="reciprocate">↔ 往复直线</button><button data-value="rotate">↻ 连续旋转</button><button data-value="intermittent">◌ 间歇转动</button><button data-value="lift">↕ 上下升降</button><button data-value="swing">⌁ 摆动</button></div></div>
+        </div>
+        <div class="advanced-filters">
+          <div><label>空间关系</label><div class="motion-options" data-kind="space"><button class="selected" data-value="any">暂不确定</button><button data-value="coaxial">同轴</button><button data-value="parallel">平行</button><button data-value="vertical">垂直</button><button data-value="remote">远距离</button></div></div>
+          <div><label>更看重什么 <small>可多选</small></label><div class="motion-options multi" data-kind="goals"><button data-value="simple">结构简单</button><button data-value="slow">减速</button><button data-value="force">增力</button><button data-value="lock">自锁</button><button data-value="reversible">可逆</button><button data-value="smooth">运动平稳</button></div></div>
+        </div>
+        <div class="selection-summary"><span>当前路径</span><b id="path-summary">手摇　·　连续旋转　→　往复直线</b><em>必要条件用于筛选，偏好用于排序</em></div>
+      </div>
+      <div class="result-head"><div><h2>为你找到 <span id="result-count">6</span> 种机构</h2><p>悬停预览运动，点击进入3D拆解。</p></div><div class="view-toggle">▦　☰</div></div>
+      <div id="mechanism-grid" class="mechanism-grid"></div>
+    </section>
+
+    <section id="product-detail" class="page product-detail-page">
+      <button class="back" data-page="products">← 返回产品馆</button>
+      <div class="product-breadcrumbs"><span id="product-breadcrumb-name">汽车</span><b>／</b><span id="system-breadcrumb">动力系统</span><b>／</b><strong id="mechanism-breadcrumb">发动机</strong></div>
+      <div class="product-explorer">
+        <aside class="structure-tree">
+          <div class="tree-title"><span>产品结构</span><b id="tree-product-title">汽车</b></div>
+          <div id="product-tree" class="tree-body"></div>
+          <div class="tree-key"><span><i class="system-dot"></i>系统</span><span><i class="mechanism-dot"></i>机构</span><span><i class="part-dot"></i>零件</span></div>
+        </aside>
+        <div class="product-stage">
+          <div class="stage-toolbar"><div><button class="selected">整体</button><button>透明</button><button>爆炸</button></div><span>拖动旋转 · 滚轮缩放</span></div>
+          <div class="car-system-view" id="product-visual-stage">
+            <svg viewBox="0 0 820 480" role="img" aria-label="汽车系统透明拆解示意">
+              <path class="detail-shell" d="M82 318l25-126c5-26 24-46 50-53l156-42c73-20 168-12 226 28l80 55 111 31c19 5 33 23 33 43v70H82z"/>
+              <path class="detail-window" d="M241 132l90-24c56-15 124-8 167 19l64 42H214z"/>
+              <g class="car-wheels"><circle cx="220" cy="330" r="67"/><circle cx="220" cy="330" r="27"/><circle cx="650" cy="330" r="67"/><circle cx="650" cy="330" r="27"/></g>
+              <g class="system-layer" data-system-layer="power"><rect x="130" y="213" width="138" height="78" rx="13"/><circle cx="167" cy="251" r="18"/><circle cx="216" cy="251" r="18"/><path d="M267 252h83"/></g>
+              <g class="system-layer" data-system-layer="transmission"><rect x="330" y="226" width="115" height="52" rx="11"/><path d="M444 252h147"/><circle cx="498" cy="252" r="15"/><circle cx="563" cy="252" r="15"/></g>
+              <g class="system-layer" data-system-layer="steering"><circle cx="613" cy="222" r="32"/><path d="M593 246l-42 58M635 245l40 59"/></g>
+              <g class="system-layer" data-system-layer="brake"><circle cx="220" cy="330" r="43"/><circle cx="650" cy="330" r="43"/></g>
+              <g class="system-layer" data-system-layer="suspension"><path d="M190 234l31 71 32-71M620 233l31 72 32-72"/></g>
+              <g class="stage-labels"><text x="129" y="196">动力系统</text><text x="353" y="211">传动系统</text><text x="596" y="174">转向系统</text><text x="627" y="410">制动系统</text></g>
+            </svg>
+            <div class="view-hint"><span>当前高亮</span><b id="visual-highlight-title">动力系统</b><p id="visual-highlight-desc">产生动力，并把燃料或电能转换成机械运动。</p></div>
+          </div>
+          <div class="stage-path"><span>当前层级</span><b>产品</b><i>→</i><b id="path-system">动力系统</b><i>→</i><b id="path-mechanism">发动机</b><i>→</i><em>选择零件继续</em></div>
+        </div>
+        <aside class="system-info">
+          <span class="badge">汽车 · 系统层</span><h1 id="system-title">动力系统</h1><p id="system-intro">负责产生汽车前进所需的动力，并将能量转换为旋转运动。</p>
+          <div class="system-facts"><div><span>输入</span><b id="system-input">燃料 / 电能</b></div><div><span>输出</span><b id="system-output">旋转动力</b></div></div>
+          <h3>包含的关键机构</h3>
+          <div id="linked-mechanisms" class="linked-mechanisms"></div>
+          <div class="layer-note"><b>为什么要分层？</b><p>先理解系统完成什么任务，再进入机构观察运动，最后认识零件。</p></div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="detail" class="page detail-page">
+      <button class="back" data-page="atlas">← 返回机构馆</button>
+      <div class="breadcrumbs">机构馆　/　运动转换　/　<span id="detail-crumb">曲柄滑块机构</span></div>
+      <div class="detail-layout">
+        <div class="viewer-panel">
+          <div class="viewer-toolbar"><button class="selected">3D</button><button>爆炸</button><button>透明</button><span></span><button>重置视角</button></div>
+          <div id="big-mechanism" class="big-mechanism interactive-mechanism"><div class="interaction-help"><span>拖动空白处</span><b>旋转视角</b><span>拖动橙色点</span><b>驱动机构</b></div><div id="mechanism-scene" class="mechanism-scene"></div></div>
+          <div class="playbar"><button id="play">Ⅱ</button><input id="timeline" type="range" min="0" max="100" value="42"><span>0:04 / 0:10</span><button>0.5×</button><button class="selected">1×</button></div>
+        </div>
+        <aside class="info-panel"><span class="badge">进阶运动简图 · 可交互</span><h1 id="detail-title">曲柄滑块机构</h1><p class="plain" id="detail-plain">一句话理解：圆盘不停旋转，连杆就会推着滑块来回移动。</p><div class="flow"><span id="detail-input">↻ 连续旋转</span><b>→</b><span id="detail-output">↔ 往复直线</span></div><a id="youtube-link" class="youtube-link" href="https://www.youtube.com/results?search_query=slider+crank+mechanism" target="_blank" rel="noopener">▶ 在 YouTube 查看真实机构演示</a><h3>它是怎样工作的？</h3><ol><li><b>驱动输入</b><span>拖动橙色驱动点，观察运动怎样进入机构。</span></li><li><b>构件传递</b><span>彩色构件根据约束改变位置与角度。</span></li><li><b>输出运动</b><span>输出端按照导轨或转轴约束完成运动。</span></li></ol><h3>使用这个机构的产品</h3><div id="detail-product-links" class="product-use-cards"></div></aside>
+      </div>
+    </section>
+  </main>
+  <div id="toast" class="toast">样机功能：后续可接入真实3D模型</div>
+  <script src="mechanics-v2.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

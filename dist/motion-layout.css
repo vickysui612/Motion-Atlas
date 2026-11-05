@@ -1,0 +1,13 @@
+html,body{height:100%;overflow:hidden}
+main{width:100%;height:100dvh;max-width:1380px;padding:14px 20px;display:grid;grid-template-rows:auto auto auto auto minmax(0,1fr) auto;gap:7px;box-sizing:border-box}
+nav{margin:0;gap:6px}nav button{padding:7px 10px;font-size:12px}
+.eyebrow{font-size:9px}h1{font-size:24px;line-height:1.25;margin:0}#intro{font-size:13px;line-height:1.5;margin:0}
+.layout{min-height:0;grid-template-columns:minmax(0,1fr) minmax(210px,27%);gap:20px}
+.layout>div{min-height:0;display:grid;grid-template-rows:minmax(0,1fr) auto auto auto;gap:8px}
+.scene{min-height:0}svg{height:100%;width:100%;max-height:none;min-height:0;object-fit:contain}
+.controls{margin:0;gap:10px}.controls button{padding:7px 12px}.readouts div{padding:7px 10px}.readouts b{font-size:17px;margin-top:3px}.readouts span{font-size:11px}
+.presets{margin:0;gap:5px}.presets:empty{display:none}.presets button{padding:6px 9px;font-size:12px}
+.explain{min-height:0;font-size:13px}.explain h2{font-size:17px;margin:4px 0 10px}.explain ol{padding-left:20px;margin:0}.explain li{font-size:13px;line-height:1.65;margin:0 0 12px}
+.boundary{font-size:11px;line-height:1.5;margin:0;padding-top:7px}
+@media(min-width:701px) and (max-height:650px){main{padding:9px 14px;gap:5px}h1{font-size:21px}nav button{padding:5px 8px;font-size:11px}.explain li{font-size:12px;margin-bottom:8px;line-height:1.5}.readouts div{padding:4px 8px}.readouts b{font-size:15px}.boundary{font-size:10px}.controls button{padding:5px 9px}}
+@media(max-width:700px){main{padding:10px;gap:5px}nav{gap:4px}nav button{font-size:10px;padding:5px 7px}h1{font-size:19px}#intro{font-size:12px}.layout{grid-template-columns:1fr;grid-template-rows:minmax(0,1fr) auto;gap:8px}.layout>div{gap:6px}.explain{padding-top:5px}.explain h2{font-size:13px;margin:0 0 4px}.explain ol{display:block;margin:0;padding-left:18px}.explain li{max-width:none;font-size:11px;line-height:1.4;margin:0 0 4px}.readouts div{padding:4px 7px}.readouts b{font-size:14px}.readouts span{font-size:10px}.boundary{font-size:9px;line-height:1.35}.controls button{font-size:11px;padding:5px 9px}.presets button{font-size:10px;padding:4px 7px}}

@@ -1,0 +1,10 @@
+{
+  "name": "mech-atlas-roadster-prototype",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "node serve.mjs 4173",
+    "test": "node --test"
+  }
+}
