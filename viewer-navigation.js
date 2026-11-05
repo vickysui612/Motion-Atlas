@@ -1,0 +1,1 @@
+document.addEventListener('click',e=>{const a=e.target.closest('a[href]');if(!a||self===top)return;const file=new URL(a.href).pathname.split('/').pop();if(file==='voron.html'||file==='motorcycle.html'){e.preventDefault();parent.postMessage({type:'ATLAS_PRODUCT',product:file==='voron.html'?'voron':'motorcycle'},location.origin)}});
